@@ -9,6 +9,4 @@ class MenuItemConfig
     String iconFilePath
 
     Map<String, String> properties
-
-
 }

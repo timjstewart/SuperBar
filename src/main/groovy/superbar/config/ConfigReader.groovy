@@ -7,7 +7,7 @@ import java.awt.Point
 
 class ConfigReader
 {
-  Config read(InputStream inStream)
+  static Config read(InputStream inStream)
   {
       Object json = new JsonSlurper().parse(inStream)
 
@@ -45,7 +45,7 @@ class ConfigReader
                     json.position.x as Integer,
                     json.position.y as Integer
                 )
-            orientation = Orientation.valueOf(json.orientation)
+            orientation = Orientation.valueOf(json.orientation as String)
             menuItems = readMenuItems(json.menuItems)
         }
 
@@ -54,7 +54,7 @@ class ConfigReader
 
     private static MenuItemConfig[] readMenuItems(Object json)
     {
-        List<MenuItemConfig> results = new ArrayList<>(json.menuItems.length)
+        List<MenuItemConfig> results = new ArrayList<>(json.size() as int)
 
         for (Object o : json)
         {

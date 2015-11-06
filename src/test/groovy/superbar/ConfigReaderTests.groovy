@@ -18,14 +18,12 @@ class ConfigReaderTests {
     @Test
     void canLoadBareConfig()
     {
-        ConfigReader reader = new ConfigReader()
-
         String configString = '''{
     "version": 1,
     "menus": []
 }'''
 
-        Config config = reader.read(strToStrm(configString))
+        Config config = ConfigReader.read(strToStrm(configString))
 
         assert config.version == 1
         assert config.menus.length == 0
@@ -34,8 +32,6 @@ class ConfigReaderTests {
     @Test
     void canLoadConfigWithEmptyMenu()
     {
-        ConfigReader reader = new ConfigReader()
-
         String configString = '''{
     "version": 1,
     "menus": [
@@ -51,7 +47,7 @@ class ConfigReaderTests {
     ]
 }'''
 
-        Config config = reader.read(strToStrm(configString))
+        Config config = ConfigReader.read(strToStrm(configString))
 
         assert config.menus[0].name == "Main"
         assert config.menus[0].position == new Point(100, 200)
@@ -61,8 +57,6 @@ class ConfigReaderTests {
     @Test
     void canLoadConfigWithMenu()
     {
-        ConfigReader reader = new ConfigReader()
-
         String configString = '''{
     "version": 1,
     "menus": [
@@ -88,7 +82,7 @@ class ConfigReaderTests {
     ]
 }'''
 
-        Config config = reader.read(strToStrm(configString))
+        Config config = ConfigReader.read(strToStrm(configString))
 
         assert config.menus[0].menuItems[0].text == "Item1"
         assert config.menus[0].menuItems[0].description == "Item1Description"
