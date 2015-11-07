@@ -4,24 +4,22 @@ import groovy.transform.CompileStatic
 import superbar.config.MenuConfig
 import superbar.config.MenuItemConfig
 
-import javax.swing.Icon
-import javax.swing.ImageIcon
+import javax.swing.*
 
 @CompileStatic
 class MenuItemFactory {
 
-    static MenuItem create(MenuItemConfig config)
-    {
+    static MenuItem create(MenuConfig owningMenuConfig, MenuItemConfig config) {
         new MenuItem(
-            config.text,
-            loadIcon(config.iconFilePath),
-            config.description,
-            config.properties
+                config.text,
+                loadIcon(config.iconFilePath),
+                config.description,
+                owningMenuConfig.menuItemSize,
+                config.properties
         )
     }
 
-    private static Icon loadIcon(String iconFilePath)
-    {
+    private static Icon loadIcon(String iconFilePath) {
         return new ImageIcon(iconFilePath)
     }
 }

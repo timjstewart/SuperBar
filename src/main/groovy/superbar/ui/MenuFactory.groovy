@@ -1,6 +1,7 @@
 package superbar.ui
 
 import groovy.transform.CompileStatic
+
 import superbar.config.MenuConfig
 import superbar.config.MenuItemConfig
 
@@ -12,16 +13,15 @@ class MenuFactory {
         Menu menu = new Menu(
                 config.name,
                 config.orientation,
+                config.menuItemSize,
                 config.menuItems.<MenuItem>collect {
                     itemConfig ->
-                    MenuItemFactory.create(itemConfig as MenuItemConfig)
+                    MenuItemFactory.create(config, itemConfig as MenuItemConfig)
                 } as List<MenuItem>
         )
 
         menu.setLocation(config.position.x as int,
                 config.position.y as int)
-
-        menu.setSize(100, 100)
 
         menu.setVisible(true)
 
