@@ -42,7 +42,8 @@ class ConfigReaderTests {
                 "y": 200
             },
             "orientation": "HORIZONTAL",
-            "menuItems": []
+            "menuItems": [],
+            "menuItemSize": 64
         }
     ]
 }'''
@@ -77,7 +78,8 @@ class ConfigReaderTests {
                         "propB": "valueB"
                     }
                 }
-            ]
+            ],
+            "menuItemSize": 64
         }
     ]
 }'''

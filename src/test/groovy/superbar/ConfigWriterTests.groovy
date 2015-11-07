@@ -37,6 +37,7 @@ class ConfigWriterTests {
                         new MenuConfig(
                                 name: "Menu1",
                                 menuItems: [],
+                                menuItemSize: 64,
                                 position: new Point(100, 200),
                                 orientation: "VERTICAL"
                         )
@@ -48,7 +49,7 @@ class ConfigWriterTests {
         ConfigWriter.write(config, outStrm)
 
         assert strmToStr(outStrm) == '''{"version":1,"menus":[{"orientation":"VERTICAL","name":"Menu1","menuItems":[],''' +
-                '''"position":{"x":100,"y":200}}]}'''
+                '''"position":{"x":100,"y":200},"menuItemSize":64}]}'''
     }
 
     @Test
@@ -65,7 +66,8 @@ class ConfigWriterTests {
                                                 text: "Item1",
                                                 description: "Item1Description",
                                                 iconFilePath: "/bar.jpg")
-                                ]
+                                ],
+                                menuItemSize: 64
                         )
                 ]
         )
@@ -76,6 +78,6 @@ class ConfigWriterTests {
 
         assert strmToStr(outStrm) == '''{"version":1,"menus":[{"orientation":"VERTICAL","name":"Menu1","menuItems":[''' +
                 '''{"iconFilePath":"/bar.jpg","description":"Item1Description","text":"Item1","properties":{}}''' +
-                '''],"position":{"x":100,"y":200}}]}'''
+                '''],"position":{"x":100,"y":200},"menuItemSize":64}]}'''
     }
 }

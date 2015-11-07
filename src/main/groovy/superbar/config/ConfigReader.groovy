@@ -3,6 +3,7 @@ package superbar.config
 import groovy.json.JsonSlurper
 import superbar.Orientation
 
+import java.awt.Dimension
 import java.awt.Point
 
 class ConfigReader
@@ -16,6 +17,7 @@ class ConfigReader
       result.with {
           version = json.version
           menus = readMenus(json.menus)
+
       }
 
       result
@@ -47,6 +49,7 @@ class ConfigReader
                 )
             orientation = Orientation.valueOf(json.orientation as String)
             menuItems = readMenuItems(json.menuItems)
+            menuItemSize = json.menuItemSize
         }
 
         result

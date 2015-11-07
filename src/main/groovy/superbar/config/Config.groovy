@@ -8,5 +8,4 @@ class Config
     int version
 
     MenuConfig[] menus
-
 }

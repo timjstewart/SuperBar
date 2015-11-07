@@ -41,6 +41,7 @@ class ConfigWriter
 
         result['name'] = menu.name
         result['menuItems'] = menuItemsToJson(menu.menuItems)
+        result['menuItemSize'] = menu.menuItemSize
         result['orientation'] = menu.orientation
         result['position'] = new HashMap<String, Object>()
         result['position']['x'] = menu.position.x as int

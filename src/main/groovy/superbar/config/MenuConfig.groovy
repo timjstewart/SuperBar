@@ -13,4 +13,7 @@ class MenuConfig
     Orientation orientation
 
     MenuItemConfig[] menuItems
+
+    int menuItemSize
+
 }
