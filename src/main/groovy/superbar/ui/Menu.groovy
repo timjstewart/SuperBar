@@ -2,7 +2,6 @@ package superbar.ui
 
 import groovy.transform.CompileStatic
 import superbar.Orientation
-import superbar.ui.MenuItem
 
 import javax.swing.*
 import java.awt.*
@@ -14,9 +13,11 @@ class Menu extends JFrame {
     Orientation orientation
 
     List<MenuItem> menuItems = new ArrayList<>()
-
+    
     Menu(String name, Orientation orientation, int menuItemSize, List<MenuItem> menuItems) {
         super(name)
+
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE)
 
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0), true)
 

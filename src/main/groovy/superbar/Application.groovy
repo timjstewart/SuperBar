@@ -9,6 +9,7 @@ import superbar.ui.MenuFactory
 
 @CompileStatic
 class Application {
+
     Config config
 
     List<Menu> menus = new ArrayList<>();

@@ -8,11 +8,12 @@
         "y": 200
       },
       "orientation": "HORIZONTAL",
+      "menuItemSize": 64,
       "menuItems": [
         {
           "text": "Item1",
           "description": "Item1Description",
-          "iconFilePath": "/foo.png",
+          "iconFilePath": "foo.png",
           "properties": {
             "propA": "valueA",
             "propB": "valueB"
@@ -22,7 +23,7 @@
         {
           "text": "Item2",
           "description": "Item2Description",
-          "iconFilePath": "/bar.png",
+          "iconFilePath": "bar.png",
           "properties": {
             "propA": "valueA2",
             "propB": "valueB2"
@@ -37,12 +38,13 @@
         "x": 300,
         "y": 500
       },
-      "orientation": "HORIZONTAL",
+      "orientation": "VERTICAL",
+      "menuItemSize": 64,
       "menuItems": [
         {
           "text": "Item1",
           "description": "Item1Description",
-          "iconFilePath": "/foo.png",
+          "iconFilePath": "foo.png",
           "properties": {
             "propA": "valueA",
             "propB": "valueB"
@@ -52,7 +54,7 @@
         {
           "text": "Item2",
           "description": "Item2Description",
-          "iconFilePath": "/bar.png",
+          "iconFilePath": "bar.png",
           "properties": {
             "propA": "valueA2",
             "propB": "valueB2"
