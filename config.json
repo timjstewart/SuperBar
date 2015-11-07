@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "menus": [
+    {
+      "name": "Main",
+      "position": {
+        "x": 100,
+        "y": 200
+      },
+      "orientation": "HORIZONTAL",
+      "menuItems": [
+        {
+          "text": "Item1",
+          "description": "Item1Description",
+          "iconFilePath": "/foo.png",
+          "properties": {
+            "propA": "valueA",
+            "propB": "valueB"
+          }
+        },
+
+        {
+          "text": "Item2",
+          "description": "Item2Description",
+          "iconFilePath": "/bar.png",
+          "properties": {
+            "propA": "valueA2",
+            "propB": "valueB2"
+          }
+        }
+
+      ]
+    },
+    {
+      "name": "Misc",
+      "position": {
+        "x": 300,
+        "y": 500
+      },
+      "orientation": "HORIZONTAL",
+      "menuItems": [
+        {
+          "text": "Item1",
+          "description": "Item1Description",
+          "iconFilePath": "/foo.png",
+          "properties": {
+            "propA": "valueA",
+            "propB": "valueB"
+          }
+        },
+
+        {
+          "text": "Item2",
+          "description": "Item2Description",
+          "iconFilePath": "/bar.png",
+          "properties": {
+            "propA": "valueA2",
+            "propB": "valueB2"
+          }
+        }
+
+      ]
+    }
+
+
+  ]
+}
